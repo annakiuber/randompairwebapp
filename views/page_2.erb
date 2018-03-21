@@ -1,0 +1,14 @@
+<h1 class = "head_color font_size cap">What Pairs Would You LIke</h1>
+
+<body class = "back_gr1" onload = "sound()">
+</body>
+
+
+<form class = "font head_color" method = "post" action = "results">
+
+<%result.each do |x| %>
+<input type = "checkbox" name = "inputs[]" value = "<%=x%>"> <%=x%>
+<%end%>
+
+<input type = "submit" value = "enter">
+</form>
