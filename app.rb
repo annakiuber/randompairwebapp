@@ -27,7 +27,7 @@ end
 
 get '/pairdnamespage' do
   "Hello World"
-erb :page_3, locals:{names_list:session[:paired_names]}
+erb :page_3, locals:{names_list:session[:array_of_names_to_pair]}
 end
 
 post '/endpage' do
