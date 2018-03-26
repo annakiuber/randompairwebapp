@@ -6,10 +6,10 @@ def annas_pairing_app(name_array)
 		array_of_names_to_pair[-2].push(array_of_names_to_pair.pop.join)
 		array_of_names_to_pair
 	else
-		
+
 		return array_of_names_to_pair
 	end
-	print array_of_names_to_pair
+	return array_of_names_to_pair
 end
 
-annas_pairing_app(["RickyBobby", "Will Ferrel", "Leonard Skinnerd"])
+# annas_pairing_app(["RickyBobby", "Will Ferrel", "Leonard Skinnerd"])

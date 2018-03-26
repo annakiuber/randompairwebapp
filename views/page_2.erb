@@ -1,14 +1,16 @@
-<h1 class = "head_color font_size cap">What Pairs Would You LIke</h1>
+<%=name_list%>
+<form method="post" action="inputnames">
+	enter another name you want to add to the list:<br>
 
-<body class = "back_gr1" onload = "sound()">
-</body>
+<input type = "text" name = "new_name" autofocus>
 
-
-<form class = "font head_color" method = "post" action = "results">
-
-<%result.each do |x| %>
-<input type = "checkbox" name = "inputs[]" value = "<%=x%>"> <%=x%>
-<%end%>
-
-<input type = "submit" value = "enter">
+<input type = "submit" value="Add">
 </form>
+<form method="post" action="make_pairs">
+	<input type = "text" name = "name_array2" value='<%=name_list%>'>
+	<br><input type="submit" value="Make pairs">
+	</form>
+<!-- <form method="post" action="make_jeramy_name">
+	<input type= "text" name="makename" value="jeramy">
+	<input type = "submit" value="makename"></form> -->
+</center>
