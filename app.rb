@@ -20,17 +20,17 @@ end
 
 post '/make_pairs' do
 puts "params[:name_array2] is #{params[:name_array2]}"
-  paired_names= annas_pairing_app(session[:name_array])
-	puts "paired_names is #{paired_names}"
+  session[:paired_names] = annas_pairing_app(session[:name_array])
+	puts "paired_names is #{session[:paired_names].class}"
 	redirect"/pairdnamespage"
 end
 
 get '/pairdnamespage' do
-  "Hello World"
-erb :page_3, locals:{names_list:session[:array_of_names_to_pair]}
+  session[:paired_names]
+erb :page_3, locals:{names_list:session[:paired_names]}
 end
 
 post '/endpage' do
   params[:array_of_names_to_pair]
-	puts "params[:array_of_names_to_pair] is #{params[:array_of_names_to_pair]}"
+	puts "paired_names is #{session[:paired_names]}"
 end
