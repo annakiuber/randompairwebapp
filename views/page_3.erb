@@ -1,6 +1,2 @@
 <%=session[:paired_names]%>
-<center>
-Pair list: <%=session[:paired_names].each do |pair|%>
-<%="#{pair.join(", ")}"%>
-<%=end%>
-</center>
+<%pairs%>
